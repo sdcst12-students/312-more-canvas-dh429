@@ -14,14 +14,16 @@ w.title("sample")
 c = tk.Canvas(width=550,height=450,background="#cccccc",bd="2")
 c.pack()
 
-
-rec = c.create_rectangle(50,50,80,80,fill="#aa0000")
+wimg = tk.PhotoImage(file="assets/charmander.png")
+charmg = c.create_image(300,200,image=wimg)
 
 
 def keyPress(e):
     print(e)
     print(e.keycode, e.keysym, e.x, e.y)
-    
+
+
+
 w.bind("<Left>",keyPress)
 w.bind("<Right>",keyPress)
 w.bind("<Up>",keyPress)
